@@ -1,0 +1,202 @@
+{
+  "created_at": "Sun Aug 16 21:42:58 +0000 2015",
+  "id": 633031220033658882,
+  "id_str": "633031220033658882",
+  "text": "RT @ibiebersxdick: dijieron que Justin no iba a los tca's as\u00ed que no vale verlos, solo estar\u00e9 aca esperando a que el gane #MTVHottest Justi\u2026",
+  "source": "\u003ca href=\"http:\/\/twitter.com\/download\/android\" rel=\"nofollow\"\u003eTwitter for Android\u003c\/a\u003e",
+  "truncated": false,
+  "in_reply_to_status_id": null,
+  "in_reply_to_status_id_str": null,
+  "in_reply_to_user_id": null,
+  "in_reply_to_user_id_str": null,
+  "in_reply_to_screen_name": null,
+  "user": {
+    "id": 3360437764,
+    "id_str": "3360437764",
+    "name": "Justin Bieber",
+    "screen_name": "kidrauhlxkjdb",
+    "location": "En Bora Bora con Justin \u2708",
+    "url": null,
+    "description": "Your music makes me smile and be happy, thanks for that @justinbieber [130715 el koala me siguio]",
+    "protected": false,
+    "verified": false,
+    "followers_count": 1611,
+    "friends_count": 1426,
+    "listed_count": 3,
+    "favourites_count": 2256,
+    "statuses_count": 8817,
+    "created_at": "Sun Jul 05 11:22:40 +0000 2015",
+    "utc_offset": null,
+    "time_zone": null,
+    "geo_enabled": false,
+    "lang": "es",
+    "contributors_enabled": false,
+    "is_translator": false,
+    "profile_background_color": "C0DEED",
+    "profile_background_image_url": "http:\/\/abs.twimg.com\/images\/themes\/theme1\/bg.png",
+    "profile_background_image_url_https": "https:\/\/abs.twimg.com\/images\/themes\/theme1\/bg.png",
+    "profile_background_tile": false,
+    "profile_link_color": "0084B4",
+    "profile_sidebar_border_color": "C0DEED",
+    "profile_sidebar_fill_color": "DDEEF6",
+    "profile_text_color": "333333",
+    "profile_use_background_image": true,
+    "profile_image_url": "http:\/\/pbs.twimg.com\/profile_images\/632530096474210304\/cZgDNyHm_normal.jpg",
+    "profile_image_url_https": "https:\/\/pbs.twimg.com\/profile_images\/632530096474210304\/cZgDNyHm_normal.jpg",
+    "profile_banner_url": "https:\/\/pbs.twimg.com\/profile_banners\/3360437764\/1439467680",
+    "default_profile": true,
+    "default_profile_image": false,
+    "following": null,
+    "follow_request_sent": null,
+    "notifications": null
+  },
+  "geo": null,
+  "coordinates": null,
+  "place": null,
+  "contributors": null,
+  "retweeted_status": {
+    "created_at": "Sun Aug 16 21:41:46 +0000 2015",
+    "id": 633030915632037888,
+    "id_str": "633030915632037888",
+    "text": "dijieron que Justin no iba a los tca's as\u00ed que no vale verlos, solo estar\u00e9 aca esperando a que el gane #MTVHottest Justin Bieber",
+    "source": "\u003ca href=\"http:\/\/twitter.com\/download\/android\" rel=\"nofollow\"\u003eTwitter for Android\u003c\/a\u003e",
+    "truncated": false,
+    "in_reply_to_status_id": null,
+    "in_reply_to_status_id_str": null,
+    "in_reply_to_user_id": null,
+    "in_reply_to_user_id_str": null,
+    "in_reply_to_screen_name": null,
+    "user": {
+      "id": 509720103,
+      "id_str": "509720103",
+      "name": "gema || 12 DAYS",
+      "screen_name": "ibiebersxdick",
+      "location": "Ecuador",
+      "url": "http:\/\/shots.me\/fckmebiebs",
+      "description": "\u203b i'm a mess right now inside out \u203b || Justin follows \/\/ in love with teen wolf || bt; Oct 31, 2013",
+      "protected": false,
+      "verified": false,
+      "followers_count": 26408,
+      "friends_count": 9618,
+      "listed_count": 49,
+      "favourites_count": 1170,
+      "statuses_count": 57483,
+      "created_at": "Thu Mar 01 04:39:41 +0000 2012",
+      "utc_offset": -18000,
+      "time_zone": "Quito",
+      "geo_enabled": true,
+      "lang": "en",
+      "contributors_enabled": false,
+      "is_translator": false,
+      "profile_background_color": "C0DEED",
+      "profile_background_image_url": "http:\/\/pbs.twimg.com\/profile_background_images\/456082930536706048\/oI6Yfpf_.jpeg",
+      "profile_background_image_url_https": "https:\/\/pbs.twimg.com\/profile_background_images\/456082930536706048\/oI6Yfpf_.jpeg",
+      "profile_background_tile": true,
+      "profile_link_color": "5400B3",
+      "profile_sidebar_border_color": "FFFFFF",
+      "profile_sidebar_fill_color": "DDEEF6",
+      "profile_text_color": "333333",
+      "profile_use_background_image": true,
+      "profile_image_url": "http:\/\/pbs.twimg.com\/profile_images\/632791040890683392\/qIHBMDUy_normal.jpg",
+      "profile_image_url_https": "https:\/\/pbs.twimg.com\/profile_images\/632791040890683392\/qIHBMDUy_normal.jpg",
+      "profile_banner_url": "https:\/\/pbs.twimg.com\/profile_banners\/509720103\/1439703060",
+      "default_profile": false,
+      "default_profile_image": false,
+      "following": null,
+      "follow_request_sent": null,
+      "notifications": null
+    },
+    "geo": null,
+    "coordinates": null,
+    "place": {
+      "id": "0114966a7365a447",
+      "url": "https:\/\/api.twitter.com\/1.1\/geo\/id\/0114966a7365a447.json",
+      "place_type": "city",
+      "name": "Portoviejo",
+      "full_name": "Portoviejo, Ecuador",
+      "country_code": "EC",
+      "country": "Ecuador",
+      "bounding_box": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -80.5848819972519,
+              -1.20098999966436
+            ],
+            [
+              -80.5848819972519,
+              -0.796815000737519
+            ],
+            [
+              -80.0109280034998,
+              -0.796815000737519
+            ],
+            [
+              -80.0109280034998,
+              -1.20098999966436
+            ]
+          ]
+        ]
+      },
+      "attributes": {}
+    },
+    "contributors": null,
+    "retweet_count": 4,
+    "favorite_count": 0,
+    "entities": {
+      "hashtags": [
+        {
+          "text": "MTVHottest",
+          "indices": [
+            103,
+            114
+          ]
+        }
+      ],
+      "trends": [],
+      "urls": [],
+      "user_mentions": [],
+      "symbols": []
+    },
+    "favorited": false,
+    "retweeted": false,
+    "possibly_sensitive": false,
+    "filter_level": "low",
+    "lang": "es"
+  },
+  "retweet_count": 0,
+  "favorite_count": 0,
+  "entities": {
+    "hashtags": [
+      {
+        "text": "MTVHottest",
+        "indices": [
+          122,
+          133
+        ]
+      }
+    ],
+    "trends": [],
+    "urls": [],
+    "user_mentions": [
+      {
+        "screen_name": "ibiebersxdick",
+        "name": "gema || 12 DAYS",
+        "id": 509720103,
+        "id_str": "509720103",
+        "indices": [
+          3,
+          17
+        ]
+      }
+    ],
+    "symbols": []
+  },
+  "favorited": false,
+  "retweeted": false,
+  "possibly_sensitive": false,
+  "filter_level": "low",
+  "lang": "es",
+  "timestamp_ms": "1439761378664"
+}

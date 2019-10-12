@@ -1,0 +1,3 @@
+word1	-2	wrong words
+word2	1
+word3	0

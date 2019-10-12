@@ -1,0 +1,44 @@
+#!/usr/bin/env python
+import argparse
+import logging.config
+import logging
+import os
+
+from tweet_loader.exceptions import TweetLoaderException
+from tweet_loader.loader import TweetLoader
+
+
+def _configure_logging(logging_conf_path):
+    if os.path.exists(logging_conf_path):
+        logging.config.fileConfig(logging_conf_path, disable_existing_loggers=False)
+    else:
+        raise TweetLoaderException(f'Failed to find logging configuration file, {logging_conf_path}')
+
+
+def _run_tweets_upload(tweet_file_path, sentiment_file_path, sql_lite_db_file_path,
+                       logging_conf_path):
+    _configure_logging(logging_conf_path)
+
+    loader = TweetLoader(tweet_file_path, sentiment_file_path, sql_lite_db_file_path)
+    loader.load()
+
+
+def _parse_parameters():
+    parser = argparse.ArgumentParser(description='Run tweets uploading.',
+                                     formatter_class=argparse.RawTextHelpFormatter)
+
+    parser.add_argument('--tweet_file_path', required=True, help='a path to the txt file with tweets')
+    parser.add_argument('--sentiment_file_path', required=True, help='a path to the txt file with sentiment dict')
+    parser.add_argument('--sql_lite_db_file_path', required=True, help='a path to the sqlite3 db')
+
+    parser.add_argument('--logging_conf_path', default='./logging.ini', help='a path to the logging configuration file')
+
+    args_dict = vars(parser.parse_args())
+    return args_dict
+
+
+if __name__ == "__main__":
+    parameters = _parse_parameters()
+
+    print(f'Start tweets uploading with parameters={parameters}.')
+    _run_tweets_upload(**parameters)

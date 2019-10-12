@@ -1,0 +1,3 @@
+word1	not_number
+word2	1
+word3	0
