@@ -3,7 +3,7 @@
 A python project to loads tweets from file to sqlite db.
 
 ### How to install
-1. package the loader in archive
+1. package the loader into archive
 ```
 python setup.py sdist
 ```

@@ -4,8 +4,8 @@ import logging.config
 import logging
 import os
 
-from tweet_loader.exceptions import TweetLoaderException
-from tweet_loader.loader import TweetLoader
+from tweet_loader.tweet_loader.exceptions import TweetLoaderException
+from tweet_loader.tweet_loader.loader import TweetLoader
 
 
 def _configure_logging(logging_conf_path):
