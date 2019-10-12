@@ -4,7 +4,7 @@ import sqlite3
 from unittest import TestCase
 
 from tweet_loader.sql import SqLiteInserter
-from tweet_loader.tweet import Tweet, Location, User
+from tweet_loader.tweet import Tweet, Location, User, Country
 
 
 class TestTweetWorker(TestCase):
@@ -34,7 +34,8 @@ class TestTweetWorker(TestCase):
                       sentiment=22,
                       created_at='Sun Aug 16 21:41:13 +0300 2015',
                       location=Location(name='Texas',
-                                        county_code='US'),
+                                        county=Country(name='United States',
+                                                       code='US')),
                       user=User('user name'))
 
         row_id = self.inserter.insert_one(tweet)
@@ -61,21 +62,24 @@ class TestTweetWorker(TestCase):
                   sentiment=22,
                   created_at='Sun Aug 16 21:41:13 +0300 2015',
                   location=Location(name='Texas',
-                                    county_code='US'),
+                                    county=Country(name='United States',
+                                                   code='US')),
                   user=User('Alex')),
             Tweet(text='tweet text message 2',
                   lang='en',
                   sentiment=1,
                   created_at='Sun Aug 16 22:41:13 +0000 2015',
                   location=Location(name='Falkirk',
-                                    county_code='GB'),
+                                    county=Country(name='???',
+                                                   code='GB')),
                   user=User('John')),
             Tweet(text='tweet text message 3',
                   lang='ar',
                   sentiment=13,
                   created_at='Sun Aug 16 23:41:13 +0000 2015',
                   location=Location(name='Texas',
-                                    county_code='US'),
+                                    county=Country(name='United States',
+                                                   code='US')),
                   user=User('Alex')),
         ]
 
@@ -108,7 +112,7 @@ class TestTweetWorker(TestCase):
             location_tuples = cur.execute('SELECT * FROM locations').fetchall()
             self.assertEqual(2, len(location_tuples))
             expected_location_tuples = [
-                (1, 'Texas', 'US'),
-                (2, 'Falkirk', 'GB'),
+                (1, 'Texas', 1),
+                (2, 'Falkirk', 2),
             ]
             self.assertListEqual(expected_location_tuples, location_tuples)

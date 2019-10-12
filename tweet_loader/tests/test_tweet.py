@@ -1,7 +1,7 @@
 from unittest import TestCase
 
 from tweet_loader.exceptions import TweetLoaderException
-from tweet_loader.tweet import Tweet, Location, User
+from tweet_loader.tweet import Tweet, Location, User, Country
 
 
 class TestTweet(TestCase):
@@ -10,7 +10,8 @@ class TestTweet(TestCase):
                   sentiment=-1,
                   created_at='Sun Aug 16 21:41:13 +0000 2015',
                   location=Location(name='Texas',
-                                    county_code='US'),
+                                    county=Country(name='United States',
+                                                   code='US')),
                   user=User('user name'))
 
     empty_location_tweet = Tweet(text='tweet text message',
@@ -42,11 +43,12 @@ class TestTweet(TestCase):
                           source_format_without_year, dest_format)
 
     def test_tuple_tweet(self):
-        expected_tuple = ('tweet text message', 'ar', -1, '2015-08-16 21:41:13 +0000', 'Texas', 'US', 'user name')
+        expected_tuple = ('tweet text message', 'ar', -1, '2015-08-16 21:41:13 +0000', 'Texas', 'United States', 'US',
+                          'user name')
 
         self.assertEqual(expected_tuple, self.tweet.to_tuple())
 
     def test_tuple_tweet_empty_location(self):
-        expected_tuple = ('tweet text message', 'ar', -1, '2015-08-16 21:41:13 +0000', None, None, 'user name')
+        expected_tuple = ('tweet text message', 'ar', -1, '2015-08-16 21:41:13 +0000', None, None, None, 'user name')
 
         self.assertEqual(expected_tuple, self.empty_location_tweet.to_tuple())

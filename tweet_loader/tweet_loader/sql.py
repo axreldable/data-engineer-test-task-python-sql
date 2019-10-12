@@ -56,7 +56,7 @@ class SqLiteInserter:
         # cur.executemany(f'INSERT INTO {table_name} VALUES', insert_tuples)
         for it in insert_tuples:
             logger.debug(f'INSERT INTO {table_name} VALUES {it}')
-            cur.execute(f'INSERT INTO {table_name} VALUES (?, ?, ?, ?, ?, ?, ?)', it)
+            cur.execute(f'INSERT INTO {table_name} VALUES (?, ?, ?, ?, ?, ?, ?, ?)', it)
 
         self.conn.commit()
         logger.debug(f'Insert {len(objects)} objects successfully.')

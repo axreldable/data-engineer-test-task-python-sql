@@ -10,15 +10,30 @@ from tweet_loader.sql import InsertObject
 logger = logging.getLogger(__name__)
 
 
-class Location:
-    def __init__(self, name: str, county_code: str):
+class Country:
+    def __init__(self, name: str, code: str):
         self.name = name
-        self.county_code = county_code
+        self.code = code
+
+    def __eq__(self, other):
+        if isinstance(other, Country):
+            return self.name == other.name and \
+                   self.code == other.code
+        return False
+
+    def __repr__(self):
+        return pformat(vars(self))
+
+
+class Location:
+    def __init__(self, name: str, county: Country):
+        self.name = name
+        self.county = county
 
     def __eq__(self, other):
         if isinstance(other, Location):
             return self.name == other.name and \
-                   self.county_code == other.county_code
+                   self.county == other.county
         return False
 
     def __repr__(self):
@@ -47,11 +62,13 @@ class Tweet(InsertObject):
 
     def to_tuple(self) -> tuple:
         location_name = None
+        country_name = None
         country_code = None
 
         if self.location is not None:
             location_name = self.location.name
-            country_code = self.location.county_code
+            country_name = self.location.county.name
+            country_code = self.location.county.code
 
         return (
             self.text,
@@ -59,6 +76,7 @@ class Tweet(InsertObject):
             self.sentiment,
             self.created_at,
             location_name,
+            country_name,
             country_code,
             self.user.name,
         )
@@ -135,8 +153,11 @@ class TweetCreator:
         location = None
         location_dict = tweet_dict.get('place')
         if location_dict is not None:
+            country = Country(name=location_dict['country'],
+                              code=location_dict['country_code'])
+
             location = Location(name=location_dict['name'],
-                                county_code=location_dict['country_code'])
+                                county=country)
 
         user = User(name=tweet_dict['user']['name'])
 

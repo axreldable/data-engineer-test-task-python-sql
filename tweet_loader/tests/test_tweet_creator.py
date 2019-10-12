@@ -3,7 +3,7 @@ from unittest import TestCase
 
 from tweet_loader.sentiment import SentimentCounterFactory
 from tweet_loader.tests.helper import read_file
-from tweet_loader.tweet import Tweet, Location, User
+from tweet_loader.tweet import Tweet, Location, User, Country
 from tweet_loader.tweet import TweetCreator
 
 
@@ -22,7 +22,8 @@ class TestTweetCreator(TestCase):
                                sentiment=-1,
                                created_at='Sun Aug 16 21:41:13 +0000 2015',
                                location=Location(name='Texas',
-                                                 county_code='US'),
+                                                 county=Country(name='United States',
+                                                                code='US')),
                                user=User('user name'))
 
         result_tweet = self.tweet_creator.create(json_tweet)
