@@ -10,13 +10,13 @@ python setup.py sdist
 2. create environment, for example conda environment
 3. install the loader and all needed dependencies
 ```
-conda create -n mts-test python=3.7
+conda create -n env-test python=3.7
 pip install tweet-loader-<version>.tar.gz
 ```
 
 ### how to use
 1. Run the tweet_loader command which is available in the environment
 ```
-conda activate mts-test
+conda activate env-test
 tweet_loader --tweet_file_path ./three_minutes_tweets.json --sentiment_file_path ./AFINN-111.txt --sql_lite_db_file_path ./tweets.db
 ```
