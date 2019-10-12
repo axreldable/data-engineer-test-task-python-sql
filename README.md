@@ -6,7 +6,7 @@ According to the task you need:
 - normalize data
 - write some sql queries for data
 
-### how to check it
+### How to check it
 1. Create sqlite database using [creating script](https://github.com/axreldable/data-engineer-test-task-python-sql/blob/master/sql/create_tweet_database.sql).
 Database schema:
 ![Database schema](https://github.com/axreldable/data-engineer-test-task-python-sql/blob/master/images/db_schema.png)

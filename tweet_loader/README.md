@@ -2,7 +2,7 @@
 
 A python project to loads tweets from file to sqlite db.
 
-### how to install
+### How to install
 1. package the loader in archive
 ```
 python setup.py sdist
@@ -14,7 +14,7 @@ conda create -n env-test python=3.7
 pip install tweet-loader-<version>.tar.gz
 ```
 
-### how to use
+### How to use
 1. Run the tweet_loader command which is available in the environment
 ```
 conda activate env-test
