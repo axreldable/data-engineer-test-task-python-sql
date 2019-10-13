@@ -13,4 +13,6 @@ Database schema:
 
 2. Load data using the tool tweet_loader according to [the readme](https://github.com/axreldable/data-engineer-test-task-python-sql/blob/master/tweet_loader/README.md).
 3. Test data loading with sql queries:
-    
+    - [happiest county script](https://github.com/axreldable/data-engineer-test-task-python-sql/blob/master/sql/happiest_country.sql)
+    - [happiest location script](https://github.com/axreldable/data-engineer-test-task-python-sql/blob/master/sql/happiest_location.sql)
+    - [happiest user tweets script](https://github.com/axreldable/data-engineer-test-task-python-sql/blob/master/sql/happiest_user_tweets.sql)
