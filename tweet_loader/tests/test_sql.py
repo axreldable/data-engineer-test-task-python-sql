@@ -38,10 +38,7 @@ class TestTweetWorker(TestCase):
                                                        code='US')),
                       user=User('user name'))
 
-        row_id = self.inserter.insert_one(tweet)
-
-        expected_row_id = 0
-        self.assertEqual(expected_row_id, row_id)
+        self.inserter.insert_one(tweet)
 
         conn = sqlite3.connect(self.tweet_db_path)
         with conn:
@@ -83,10 +80,7 @@ class TestTweetWorker(TestCase):
                   user=User('Alex')),
         ]
 
-        row_id = self.inserter.insert_many(tweets)
-
-        expected_row_id = 0
-        self.assertEqual(expected_row_id, row_id)
+        self.inserter.insert_many(tweets)
 
         conn = sqlite3.connect(self.tweet_db_path)
         with conn:
@@ -116,3 +110,13 @@ class TestTweetWorker(TestCase):
                 (2, 'Falkirk', 2),
             ]
             self.assertListEqual(expected_location_tuples, location_tuples)
+
+    def test_questions_str_empty(self):
+        self.assertEqual('()', self.inserter._questions_str(0))
+        self.assertEqual('()', self.inserter._questions_str(-1))
+        self.assertEqual('()', self.inserter._questions_str(-5))
+
+    def test_questions_str(self):
+        self.assertEqual('(?)', self.inserter._questions_str(1))
+        self.assertEqual('(?, ?, ?)', self.inserter._questions_str(3))
+        self.assertEqual('(?, ?, ?, ?, ?)', self.inserter._questions_str(5))

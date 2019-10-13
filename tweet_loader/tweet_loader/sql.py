@@ -43,6 +43,26 @@ class SqLiteInserter:
 
         return conn
 
+    def _questions_str(self, question_amount) -> str:
+        """
+        Creates question string parameter.
+
+        Ex:
+            - question_amount = 5
+            - result = (?, ?, ?, ?, ?)
+
+            - question_amount = 0
+            - result = ()
+
+        :param question_amount: an amount of question in str
+        :return:
+        """
+        if question_amount <= 0:
+            return '()'
+
+        questions = ', '.join('?' * question_amount)
+        return f'({questions})'
+
     def insert_many(self, objects: list):
         if len(objects) == 0:
             logger.warning('Try to insert empty list of objects!')
@@ -51,18 +71,15 @@ class SqLiteInserter:
         logger.debug(f'Trying to insert {len(objects)} objects...')
 
         table_name = objects[0].table_name()
+        params_amount = len(objects[0].to_tuple())
 
-        insert_tuples_iter = map(lambda obj: obj.to_tuple(), objects)
+        insert_tuples = list(map(lambda obj: obj.to_tuple(), objects))
 
         cur = self.conn.cursor()
-        # cur.executemany(f'INSERT INTO {table_name} VALUES', insert_tuples)
-        for it in insert_tuples_iter:
-            logger.debug(f'INSERT INTO {table_name} VALUES {it}')
-            cur.execute(f'INSERT INTO {table_name} VALUES (?, ?, ?, ?, ?, ?, ?, ?)', it)
+        cur.executemany(f'INSERT INTO {table_name} VALUES {self._questions_str(params_amount)}', insert_tuples)
 
         self.conn.commit()
         logger.debug(f'Insert {len(objects)} objects successfully.')
-        return cur.lastrowid
 
-    def insert_one(self, obj: InsertObject) -> str:
+    def insert_one(self, obj: InsertObject):
         return self.insert_many([obj])
