@@ -45,7 +45,7 @@ class SentimentCounterFactory:
                 word, sentiment = line.split(separator)
                 result_dict[word] = int(sentiment)
         except ValueError:
-            raise TweetLoaderException(f'Failed to create dict from file {file_path}!')
+            raise TweetLoaderException(f'Failed to create a dict from the file {file_path}!')
 
         return result_dict
 

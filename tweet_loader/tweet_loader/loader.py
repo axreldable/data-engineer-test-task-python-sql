@@ -42,4 +42,5 @@ class TweetLoader:
 
         logger.info(f'Starting loading tweets to sqlite...')
         self.sql_inserter.insert_many(tweets)
+        self.sql_inserter.close_connection()
         logger.info('Successfully insert tweets.')
